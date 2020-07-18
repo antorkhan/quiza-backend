@@ -25,3 +25,5 @@ Route::patch('exam', function( Request $request ) {
     $json_response = json_encode(  Question::find($request->id)->question_set,JSON_UNESCAPED_SLASHES    );
     return $json_response;
 });
+
+Route::get('grade', 'GradingController@grade');
